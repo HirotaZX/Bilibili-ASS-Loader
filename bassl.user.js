@@ -8,7 +8,7 @@
 // @grant               none
 // @version             0.1.1
 // @author              HirotaZX
-// @require             https://cdn.jsdelivr.net/npm/assjs@0.1.2/dist/ass.global.min.js
+// @require             https://gcore.jsdelivr.net/npm/assjs@0.1.2/dist/ass.global.min.js
 // @description         Load local ASS subtitles or danmaku for Bilibili videos
 // @description:zh      为哔哩哔哩视频加载本地 ASS 弹幕/字幕
 // @description:zh-CN   为哔哩哔哩视频加载本地 ASS 弹幕/字幕
