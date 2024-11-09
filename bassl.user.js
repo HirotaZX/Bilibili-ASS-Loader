@@ -2,11 +2,10 @@
 // @name                Bilibili ASS Loader
 // @name:zh             哔哩哔哩本地 ASS 弹幕加载器
 // @name:zh-CN          哔哩哔哩本地 ASS 弹幕加载器
-// @name                哔哩哔哩本地 ASS 弹幕加载器
 // @namespace           https://github.com/HirotaZX
 // @match               *://www.bilibili.com/video/*
 // @grant               none
-// @version             0.1.1
+// @version             0.1.2
 // @author              HirotaZX
 // @require             https://gcore.jsdelivr.net/npm/assjs@0.1.2/dist/ass.global.min.js
 // @description         Load local ASS subtitles or danmaku for Bilibili videos
