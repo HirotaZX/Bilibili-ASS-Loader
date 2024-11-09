@@ -6,7 +6,7 @@
 // @namespace           https://github.com/HirotaZX
 // @match               *://www.bilibili.com/video/*
 // @grant               none
-// @version             0.1.0
+// @version             0.1.1
 // @author              HirotaZX
 // @require             https://cdn.jsdelivr.net/npm/assjs@0.1.2/dist/ass.global.min.js
 // @description         Load local ASS subtitles or danmaku for Bilibili videos
