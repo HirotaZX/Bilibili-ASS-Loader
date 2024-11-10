@@ -5,7 +5,7 @@
 // @namespace           https://github.com/HirotaZX
 // @match               *://www.bilibili.com/video/*
 // @grant               none
-// @version             0.1.2
+// @version             0.1.3
 // @author              HirotaZX
 // @require             https://gcore.jsdelivr.net/npm/assjs@0.1.2/dist/ass.global.min.js
 // @description         Load local ASS subtitles or danmaku for Bilibili videos
@@ -84,11 +84,18 @@
         });
 
         const fileInput = document.getElementById('bassl-file-input');
+        const fileCount = document.getElementById('bassl-file-count');
         fileInput.addEventListener('change', (event) => {
             files = Array.from(event.target.files).filter(f => f.name.includes('.ass'));
-            const fileCount = document.getElementById('bassl-file-count');
             fileCount.innerText = files.length;
             loadAss();
+        });
+        
+        const assContainer = document.getElementById('ass-container');
+        const opacitySlider = document.getElementById('bassl-opacity-slider');
+        opacitySlider.addEventListener('input', function() {
+            const opacity = opacitySlider.value / 100;
+            assContainer.style.opacity = opacity;
         });
 
         const showAss = document.getElementById('bassl-show');
@@ -163,6 +170,12 @@
         </div>
         <div class="bassl-row">
             <label>已加载 <span id="bassl-file-count">0</span> 个分P弹幕</label>
+        </div>
+        <div class="bassl-row">
+            <label>透明度</label>
+            <div class="bassl-num-slider">
+                <input id="bassl-opacity-slider" type="range" min="0" max="100" value="100">
+            </div>
         </div>
         <div class="bassl-row">
             <label>显示 ASS 弹幕</label>
@@ -290,6 +303,50 @@
 
         input:checked + .bassl-slider:before {
             transform: translateX(20px);
+        }
+
+        .bassl-num-slider {
+            width: 96px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bassl-num-slider input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: background 0.3s;
+        }
+
+        .bassl-num-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px; 
+            height: 16px;
+            background: #2196F3;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .bassl-num-slider input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #2196F3;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .bassl-num-slider input[type="range"]:hover::-webkit-slider-thumb {
+            background: #1e88e5;
+        }
+
+        .bassl-num-slider input[type="range"]:hover::-moz-range-thumb {
+            background: #1e88e5;
         }
 `;
 

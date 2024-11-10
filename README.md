@@ -8,7 +8,8 @@ Load local ASS subtitles or danmaku for Bilibili videos.
 
 1. 为哔哩哔哩分P视频加载整个文件夹的 ASS 弹幕/字幕。
 2. 自动匹配分P标题和 ASS 文件名，切换分P时自动加载对应 ASS 弹幕/字幕。
-3. TODO: 支持非分P视频。
+3. ASS 弹幕透明度调节。
+4. TODO: 支持非分P视频。
 
 ## Usage / 使用
 
